@@ -37,7 +37,8 @@ print("Hello World!")
 # MAGIC |    2    |    Sarah  |
 # MAGIC |    3    |    John   |
 # MAGIC
-# MAGIC Links (or Embedded HTML): <a href="https://docs.databricks.com/notebooks/notebooks-manage.html" target="_blank"> Managing Notebooks documentation</a>
+# MAGIC Links (or Embedded HTML): <a href="https://docs.databricks.com/notebooks/notebooks-manage.html" target="_blank"> Managing 
+# MAGIC Notebooks documentation</a>
 
 # COMMAND ----------
 
@@ -45,11 +46,20 @@ print("Hello World!")
 
 # COMMAND ----------
 
-print(full_name)
+# MAGIC %run ../Includes/test_setup
+
+# COMMAND ----------
+
+print(my_name)
 
 # COMMAND ----------
 
 # MAGIC %fs ls '/databricks-datasets'
+
+# COMMAND ----------
+
+files = dbutils.fs.ls('/databricks-datasets')
+display(files)
 
 # COMMAND ----------
 
@@ -67,7 +77,3 @@ print(files)
 # COMMAND ----------
 
 display(files)
-
-# COMMAND ----------
-
-
